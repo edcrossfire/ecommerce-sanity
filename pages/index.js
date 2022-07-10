@@ -6,16 +6,16 @@ import { Product, FooterBanner, HeroBanner } from "../components";
 const Home = ({ products, bannerData }) => {
   return (
     <div>
-      <HeroBanner />
-      <div>
-        <h2>Best Selling Shoes</h2>
+      <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
+      <div className="grid place-items-center ">
+        <h2 className="font-bold text-4xl">Best Selling Shoes</h2>
         <p>Unique shoes for men and women</p>
       </div>
-      <div>
-        {products?.map((product) => product.name)}
+      <div className="flex justify-center max-w-screen-lg mx-auto space-x-3 flex-wrap">
+        {products?.map((product) => <Product key={product._id} product={product} />)}
       </div>
 
-      <FooterBanner />
+      <FooterBanner footerBanner={bannerData && bannerData[0]} />
     </div>
   )
 };
