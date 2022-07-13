@@ -1,3 +1,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+  }
+
+@layer base {
+    body {
+        @apply surface-background
+    }
+    h1, h2, h3, h4 {
+        @apply on-surface-text font-sans font-semibold
+    }
+    h1 {
+        @apply text-4xl
+    }
+    h2 {
+        @apply text-3xl
+    }
+    h3 {
+        @apply text-2xl
+    }
+    h4 {
+        @apply text-xl
+    }
+    p {
+        @apply on-surface-text-subdued font-sans font-semibold text-base
+    }
+    .box {
+        @apply max-w-sm md:max-w-3xl lg:max-w-7xl mx-auto
+    }
+    .primary-base-bg {
+        @apply bg-indigo-700
+    }
+    .primary-subdued-bg {
+        @apply bg-indigo-500
+    }
+    .primary-base-fill {
+        @apply fill-indigo-700
+    }
+    .primary-subdued-fill {
+        @apply fill-indigo-500
+    }
+    .on-primary-text {
+        @apply text-indigo-50
+    }
+    .primary-button {
+        @apply p-3 primary-base-bg shadow-md rounded-xl font-sans font-semibold on-primary-text hover:primary-subdued-bg hover:shadow-lg
+    }
+    .surface-background {
+        @apply bg-zinc-50
+    }
+    .surface-base {
+        @apply bg-zinc-200
+    }
+    .surface-subdued {
+        @apply bg-zinc-100
+    }
+    .on-surface-text {
+        @apply text-zinc-900
+    }
+    .on-surface-text-subdued {
+        @apply text-zinc-600
+    }
+    .on-surface-border {
+        @apply border-zinc-800
+    }
+}

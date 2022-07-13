@@ -5,14 +5,14 @@ import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div className="box">
       <Head>
         <title>Shoe Store</title>
       </Head>
       <header>
         <Navbar />
       </header>
-      <main className="max-w-screen-xl mx-auto w-full">
+      <main className="w-full">
         {children}
       </main>
       <footer>

@@ -8,10 +8,10 @@ const Home = ({ products, bannerData }) => {
     <div>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
       <div className="grid place-items-center ">
-        <h2 className="font-bold text-4xl">Best Selling Shoes</h2>
+        <h2 className="">Best Selling Shoes</h2>
         <p>Unique shoes for men and women</p>
       </div>
-      <div className="flex justify-center max-w-screen-lg mx-auto space-x-3 flex-wrap">
+      <div className="flex justify-center space-x-3 flex-wrap">
         {products?.map((product) => <Product key={product._id} product={product} />)}
       </div>
 

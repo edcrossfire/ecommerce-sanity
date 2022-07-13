@@ -30,7 +30,7 @@ const ProductDetails = ({ product, products }) => {
             </div>
 
             <div className="flex flex-col p-4">
-                <h1 className="text-2xl font-semibold">{name}</h1>
+                <h3 className="">{name}</h3>
                 <div className="flex items- space-x-1 mt-[10px]">
                     <div className="flex items-center">
                         <AiFillStar />
@@ -44,24 +44,24 @@ const ProductDetails = ({ product, products }) => {
                     </p>
                 </div>
                 <h4 className="pt-2">Details: </h4>
-                <p className="text-slate-500">{details}</p>
-                <p className="font-semibold pt-2 text-2xl">${price}</p>
+                <p className="">{details}</p>
+                <p className="pt-2">${price}</p>
                 <div className="flex items-center mt-[10px]">
-                    <h3 className="font-bold pb-1 pr-2">Quantity:</h3>
+                    <h4 className="pb-1 pr-2">Quantity:</h4>
                     <p className="flex items-center justify-evenly border w-full">
                         <div className="w-fit p-[8px] cursor-pointer" onClick={decQty}><AiOutlineMinus /></div>
-                        <div className="border-x px-5 w-fit p-[8px] cursor-pointer text-[20px]">{qty}</div>
+                        <div className="border-x px-5 w-fit p-[8px] cursor-pointer">{qty}</div>
                         <div className="w-fit p-[8px] cursor-pointer" onClick={incQty}><AiOutlinePlus /></div>
                     </p>
                 </div>
                 <div className="">
-                    <button type="button" className="mt-5 p-3 w-full rounded-xl text-white bg-slate-800 shadow-xl" onClick={() => onAdd(product, qty)}>Add to Cart</button>
-                    <button type="button" className="mt-1 p-3 w-full rounded-xl text-white bg-slate-800 shadow-xl" onClick={handleBuyNow}>Buy Now</button>
+                    <button type="button" className="mt-5 primary-button w-full" onClick={() => onAdd(product, qty)}>Add to Cart</button>
+                    <button type="button" className="mt-1 primary-button w-full" onClick={handleBuyNow}>Buy Now</button>
                 </div>
             </div>
         </div>
         <div className="">
-            <h2 className="grid place-items-center text-3xl font-semibold">You may also like</h2>
+            <h4 className="grid place-items-center">You may also like</h4>
             <div className="">
                 <div className="flex flex-col justify-center items-center lg:flex-row">
                     {products.map((item) => (
