@@ -1,3 +1,5 @@
+# eCommerce store (a fully functioning eCommerce site that utilizes Sanity as a headless CMS and integrates with Stripe API for payments)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
